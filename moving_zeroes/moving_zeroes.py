@@ -2,10 +2,21 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
-    # Your code here
 
-    pass
+def moving_zeroes(arr):    
+    newarr = []
+
+    # iterate over the array
+    for x in arr:
+        # when you see something not zero, put it a new array
+        if x != 0:
+            newarr.append(x)
+
+    # fill with zeros until the correct length
+    while len(newarr) != len(arr):
+        newarr.append(0)
+
+    return newarr
 
 
 if __name__ == '__main__':
